@@ -28,12 +28,6 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    MatButtonModule,
     AppRoutingModule,
   ],
   providers: [],
