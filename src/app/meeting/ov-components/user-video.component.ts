@@ -6,7 +6,6 @@ import { StreamManager } from 'openvidu-browser';
   styles: [
     `
       ov-video {
-        width: 100%;
         height: auto;
         float: left;
         cursor: pointer;
@@ -28,7 +27,7 @@ import { StreamManager } from 'openvidu-browser';
   template: ` <div>
     <ov-video [streamManager]="streamManager!"></ov-video>
     <div>
-      <p (click)="applyFilter()">{{ getNicknameTag() }}</p>
+      <p>{{ getNicknameTag() }}</p>
     </div>
   </div>`,
 })
