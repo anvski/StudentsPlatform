@@ -12,7 +12,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatIconModule } from '@angular/material/icon';
-
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
     UserVideoComponent,
     OpenViduVideoComponent,
     NavBarComponent,
+    SideNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatToolbarModule,
     MatIconModule,
     AppRoutingModule,
+    MatDividerModule,
+    MatSidenavModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,26 @@
+.example-container {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-icon {
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+mat-drawer {
+  background-color: grey;
+}
+
+mat-drawer-container {
+  height: 100%;
+}
