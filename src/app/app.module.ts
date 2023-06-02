@@ -8,6 +8,9 @@ import { OpenViduVideoComponent } from './meeting/ov-components/ov-video.compone
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -15,8 +18,16 @@ import { MatButtonModule } from '@angular/material/button';
     MeetingComponent,
     UserVideoComponent,
     OpenViduVideoComponent,
+    NavBarComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, MatButtonModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
