@@ -9,15 +9,12 @@ $indigo-palette: (
   700: rgb(75, 130, 130),
   800: rgb(65, 119, 119),
   900: rgb(40, 90, 90),
-  // ... continues to 900
-  contrast:
-    (
-      50: rgba(black, 0.87),
-      100: rgba(black, 0.87),
-      200: rgba(black, 0.87),
-      300: white,
-      // ... continues to 900
-    ),
+  contrast: (
+    100: #a1ffff,
+    200: #6effff,
+    400: #3bffff,
+    700: #22ffff,
+  ),
 );
 
 $orange-palette: (
