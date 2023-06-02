@@ -6,31 +6,8 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <script
-      src="https://8x8.vc/vpaas-magic-cookie-bb4b5ce877df4acf92212064ac14766d/external_api.js"
-      async
-    ></script>
-    <style>
-      html,
-      body,
-      #jaas-container {
-        height: 100%;
-      }
-    </style>
-    <script type="text/javascript">
-      window.onload = () => {
-        const api = new JitsiMeetExternalAPI("8x8.vc", {
-          roomName:
-            "vpaas-magic-cookie-bb4b5ce877df4acf92212064ac14766d/SampleAppLiberalAcquisitionsInvokeNear",
-          parentNode: document.querySelector("#jaas-container"),
-          // Make sure to include a JWT if you intend to record,
-          // make outbound calls or use any other premium features!
-          // jwt: "eyJraWQiOiJ2cGFhcy1tYWdpYy1jb29raWUtYmI0YjVjZTg3N2RmNGFjZjkyMjEyMDY0YWMxNDc2NmQvMDQyYjA0LVNBTVBMRV9BUFAiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJqaXRzaSIsImlzcyI6ImNoYXQiLCJpYXQiOjE2ODU3MDU0MTMsImV4cCI6MTY4NTcxMjYxMywibmJmIjoxNjg1NzA1NDA4LCJzdWIiOiJ2cGFhcy1tYWdpYy1jb29raWUtYmI0YjVjZTg3N2RmNGFjZjkyMjEyMDY0YWMxNDc2NmQiLCJjb250ZXh0Ijp7ImZlYXR1cmVzIjp7ImxpdmVzdHJlYW1pbmciOmZhbHNlLCJvdXRib3VuZC1jYWxsIjpmYWxzZSwic2lwLW91dGJvdW5kLWNhbGwiOmZhbHNlLCJ0cmFuc2NyaXB0aW9uIjpmYWxzZSwicmVjb3JkaW5nIjpmYWxzZX0sInVzZXIiOnsiaGlkZGVuLWZyb20tcmVjb3JkZXIiOmZhbHNlLCJtb2RlcmF0b3IiOnRydWUsIm5hbWUiOiJUZXN0IFVzZXIiLCJpZCI6ImF1dGgwfDY0NzlkMWYwM2M0YjE0YWY4OTVlNGQ2YyIsImF2YXRhciI6IiIsImVtYWlsIjoidGVzdC51c2VyQGNvbXBhbnkuY29tIn19LCJyb29tIjoiKiJ9.Vlzebg6wY2tm-kWqBzgpjQAHx-cP8-m5EeVvaHHoSDhE5Ax5hft6yaq_D1vEtn7rgcNzCLuMQCEuEKJaQntkOpypBEes8dLFBeqXVuJLL2CtgAFURjNoHJHHFER23kTDFxuOTxaVrdGxdezgLicoX97g71k4uPddGnl5j9DuY0zykod4Gg2_a1iB7Yb0DGS_XW88BUyTMcH14o5aA2RuB7SrIq5HAXrjDhzjbEli-MEhnpUiDkdXHifEUm5vPr7U5Lzt2E-6tFlbwBKDK0qUYBX5TGzvnPOFJWJs65Um5Pgr_AEBDRjd8_mvoGbTEWfALzlPJ4ZzBMAhAAO0iPlfiA"
-        });
-      };
-    </script>
   </head>
   <body>
-    <div id="jaas-container" />
+    <app-root></app-root>
   </body>
 </html>
