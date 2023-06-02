@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+$indigo-palette: (
+  50: rgb(234, 241, 241),
+  100: rgb(203, 220, 220),
+  200: rgb(169, 197, 197),
+  300: rgb(134, 173, 173),
+  400: rgb(108, 156, 156),
+  500: rgb(108, 156, 156),
+  600: rgb(82, 138, 138),
+  700: rgb(75, 130, 130),
+  800: rgb(65, 119, 119),
+  900: rgb(40, 90, 90),
+  // ... continues to 900
+  contrast:
+    (
+      50: rgba(black, 0.87),
+      100: rgba(black, 0.87),
+      200: rgba(black, 0.87),
+      300: white,
+      // ... continues to 900
+    ),
+);
+
+$orange-palette: (
+  50: rgb(252, 243, 233),
+  100: rgb(248, 224, 201),
+  200: rgb(244, 204, 165),
+  300: rgb(239, 183, 129),
+  400: rgb(235, 167, 102),
+  500: rgb(232, 152, 75),
+  600: rgb(229, 144, 68),
+  700: rgb(226, 133, 59),
+  800: rgb(222, 123, 51),
+  900: rgb(216, 106, 35),
+  // ... continues to 900
+  contrast:
+    (
+      50: rgba(black, 0.87),
+      100: rgba(black, 0.87),
+      200: rgba(black, 0.87),
+      300: white,
+      // ... continues to 900
+    ),
+);
+
+$dark-color-palette: (
+  50: #e4e4e4,
+  100: #bbbbbb,
+  200: #8e8e8d,
+  300: #61615f,
+  400: #3f3f3d,
+  500: #1d1d1b,
+  600: #1a1a18,
+  700: #151514,
+  800: #111110,
+  900: #0a0a08,
+  contrast: (
+    100: #ffff51,
+    200: #ffff1e,
+    400: #eaea00,
+    700: #d0d000,
+  ),
+);
+
+@use "@angular/material" as mat;
+
+$my-palette: $indigo-palette;
+
+@include mat.core();
+
+$my-primary: mat.define-palette($indigo-palette, 600);
+$my-accent: mat.define-palette($orange-palette, 500);
+$my-dark: mat.define-palette($dark-color-palette, 500);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-dark,
+      warn: $my-accent,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+@include mat.core-theme($my-theme);
+
+@include mat.button-theme($my-theme);

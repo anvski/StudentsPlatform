@@ -7,6 +7,7 @@ import { UserVideoComponent } from './meeting/ov-components/user-video.component
 import { OpenViduVideoComponent } from './meeting/ov-components/ov-video.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     UserVideoComponent,
     OpenViduVideoComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, MatButtonModule],
   providers: [],
   bootstrap: [AppComponent],
 })

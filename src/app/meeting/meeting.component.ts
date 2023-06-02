@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, HostListener, OnDestroy } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import {
   OpenVidu,
   Publisher,
@@ -17,7 +18,6 @@ import { environment } from '../../environments/environment';
 })
 export class MeetingComponent {
   APPLICATION_SERVER_URL = environment.applicationServerUrl;
-
   // OpenVidu objects
   OV: OpenVidu | undefined;
   session: Session | undefined;
