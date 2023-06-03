@@ -1,14 +1,23 @@
-<a>
-  <mat-card class="mat-elevation-z4">
-    <mat-card-header color="primary">
-      <mat-card-title>TITLEEE</mat-card-title>
-    </mat-card-header>
+<div class="card">
+  <mat-card class="example-card">
     <img
       mat-card-image
-      src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+      src="../../assets/images/example-course.jpg"
+      alt="Photo of a Shiba Inu"
     />
-    <mat-card-content color="primary">
-      <p>TESTERINO</p>
+    <mat-card-content>
+      <h3>{{ course?.name }}</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+      <p>Participants: {{ course?.participants }}</p>
     </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>ENROLL</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
   </mat-card>
-</a>
+</div>

@@ -36,13 +36,14 @@ a {
   padding: 0px 15%;
 }
 .banner {
-  background: url(../../assets/images/course-bg.jpg);
+  background: url(../../assets/images/course-bg1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 80vh;
   background-attachment: fixed;
 }
+
 .logo {
   width: 30%;
   display: flex;
@@ -219,6 +220,10 @@ section.content.mission {
   padding: 5%;
   display: flex;
   animation: pop-in 0.5s;
+}
+
+.card-courses {
+  margin-top: 2%;
 }
 .contents {
   margin-left: 2%;
