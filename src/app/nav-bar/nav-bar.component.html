@@ -1,4 +1,4 @@
-<mat-toolbar class="app-toolbar" color="warn">
+<mat-toolbar class="app-toolbar" color="yellow">
   <button
     mat-icon-button
     class="example-icon"
@@ -6,21 +6,15 @@
   >
     <mat-icon color="primary" (click)="onShowMenu()">menu</mat-icon>
   </button>
-  <span>Students Platform</span>
+  <span> Students Platform</span>
   <span class="example-spacer"></span>
-  <button
-    mat-icon-button
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon"
-  >
-    <mat-icon>favorite</mat-icon>
+  <button routerLink="" mat-raised-button color="primary">Home</button>
+  <button routerLink="/list-courses" mat-raised-button color="primary">
+    Courses
   </button>
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with share icon"
-  >
-    <mat-icon>share</mat-icon>
+  <button routerLink="/leaderboard" mat-raised-button color="primary">
+    Leaderboard
   </button>
+  <button routherLink="" mat-raised-button color="primary">Hi, User!</button>
 </mat-toolbar>
 <app-side-nav></app-side-nav>

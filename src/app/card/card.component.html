@@ -1,23 +1,25 @@
 <div class="card">
-  <mat-card class="example-card">
-    <img
-      mat-card-image
-      src="../../assets/images/example-course.jpg"
-      alt="Photo of a Shiba Inu"
-    />
-    <mat-card-content>
-      <h3>{{ course?.name }}</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
-      <p>Participants: {{ course?.participants }}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>ENROLL</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+  <a routerLink="/course/{{ course?.courseId }}">
+    <mat-card class="example-card">
+      <img
+        mat-card-image
+        src="../../assets/images/example-course.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+      <mat-card-content>
+        <h3>{{ course?.name }}</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>Participants: {{ course?.participants }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">ENROLL</button>
+        <button mat-raised-button color="warn">SHARE</button>
+      </mat-card-actions>
+    </mat-card></a
+  >
 </div>

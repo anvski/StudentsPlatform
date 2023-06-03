@@ -22,7 +22,13 @@
       <div class="container">
         <div class="heading">
           <p>Connecting Students, Enhancing Education.</p>
-          <button type="donation" name="donation" href="#donation" class="btn">
+          <button
+            type="donation"
+            name="donation"
+            href="#donation"
+            class="btn"
+            routerLink="/list-courses"
+          >
             Click Here to Start
           </button>
         </div>
@@ -35,10 +41,10 @@
           <div class="box-1">
             <div>
               <p>Courses to choose from</p>
-              <h2>1,321,901</h2>
-              <p>Students 150</p>
-              <p style="padding: 12px 0px 31px">Events</p>
-              <a href="#">View COURSES</a>
+              <h2>{{ courses.length }}</h2>
+              <p>Students: {{ students.length }}</p>
+              <p style="padding: 12px 0px 31px">Events: {{ events.length }}</p>
+              <a routerLink="/list-courses">View COURSES</a>
             </div>
           </div>
           <div class="box-2">
@@ -229,68 +235,6 @@
         </div>
       </div>
     </section>
-
-    <footer>
-      <div class="foot-div">
-        <div class="foot-logo">
-          <div class="logo">
-            <h1>Students Platform</h1>
-          </div>
-        </div>
-        <div class="foot-list">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="#work">How it work</a></li>
-            <li><a href="#donation">Donate</a></li>
-            <li><a href="#mission">Mission</a></li>
-          </ul>
-        </div>
-
-        <div class="foot-list">
-          <h3>About</h3>
-          <ul>
-            <li><a href="#">Partnership</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-
-        <div class="foot-list">
-          <h3>Support</h3>
-          <ul>
-            <li><a href="#">Help & Support</a></li>
-            <li><a href="#">Trust & Safety</a></li>
-            <li><a href="#">Community</a></li>
-          </ul>
-        </div>
-
-        <div class="foot-list">
-          <h3>Stay Connected</h3>
-          <p>Join us with <b>+50,000</b> Students and Enrich you Knowledge</p>
-          <form action="" method="">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="    Your Email"
-              required
-            />
-            <input type="date" name="date" id="date" hidden />
-            <input type="time" name="time" id="time" hidden />
-            <button
-              type="submit"
-              name="submit"
-              id="submit"
-              class="btn btn-light"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-        <p class="" style="text-align: center">
-          Copyright &copy; 2023 - Students Platform All Rights Reserved
-        </p>
-      </div>
-    </footer>
+    <app-footer></app-footer>
   </body>
 </html>

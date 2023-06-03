@@ -25,6 +25,7 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { EventsComponent } from './course-detail/events/events.component';
 import { NotesComponent } from './course-detail/notes/notes.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { NotesComponent } from './course-detail/notes/notes.component';
     CourseDetailComponent,
     EventsComponent,
     NotesComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
