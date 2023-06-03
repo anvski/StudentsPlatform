@@ -93,10 +93,14 @@ $my-theme: mat.define-light-theme(
 
 @include mat.tabs-theme($my-theme);
 
+@include mat.table-theme($my-theme);
+
+@include mat.progress-spinner-theme($my-theme);
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  height: 100vh;
+  height: 100%;
 }
 
 body::-webkit-scrollbar {

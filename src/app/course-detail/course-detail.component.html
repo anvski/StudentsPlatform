@@ -1,8 +1,17 @@
+<ng-container *ngIf="id == null">
+  <mat-progress-spinner></mat-progress-spinner>
+</ng-container>
+
 <div class="course-div">
-  <div class="title pop-up">Course Title</div>
-  <div class="subtitle pop-up">Additional Information</div>
+  <div class="title pop-up">{{ course?.name }}</div>
+  <div class="subtitle pop-up">Participants: {{ course?.participants }}</div>
   <div class="short-description pop-up">Short Description</div>
-  <div class="additional-info pop-up">Additional Details</div>
+  <div
+    class="additional-info pop-up"
+    [ngClass]="course?.done ? 'done' : 'active'"
+  >
+    {{ course?.done ? "INACTIVE" : "ACTIVE" }}
+  </div>
 </div>
 <nav mat-tab-nav-bar color="primary" mat-align-tabs="center">
   <a

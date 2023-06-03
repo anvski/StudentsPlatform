@@ -25,6 +25,10 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { EventsComponent } from './course-detail/events/events.component';
 import { NotesComponent } from './course-detail/notes/notes.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { NoteComponent } from './course-detail/notes/note/note.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,7 @@ import { NotesComponent } from './course-detail/notes/notes.component';
     CourseDetailComponent,
     EventsComponent,
     NotesComponent,
+    NoteComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +60,9 @@ import { NotesComponent } from './course-detail/notes/notes.component';
     FlexLayoutModule,
     MatCardModule,
     MatTabsModule,
+    MatTableModule,
+    MatProgressSpinnerModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
