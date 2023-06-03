@@ -1,0 +1,26 @@
+<nav class="banner">
+  <div class="container">
+    <div class="heading">
+      <p>Connecting Students, Enhancing Education.</p>
+      <button type="donation" name="donation" href="#donation" class="btn">
+        Click Here to Start
+      </button>
+    </div>
+    <div class="video-play"></div>
+  </div>
+</nav>
+<div>
+  <div class="contents">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div
+        *ngFor="let course of courses"
+        fxFlex="25%"
+        fxFlex.xs="100%"
+        fxFlex.sm="25%"
+      >
+        <p>{{ course?.participants }}</p>
+        <app-card></app-card>
+      </div>
+    </div>
+  </div>
+</div>

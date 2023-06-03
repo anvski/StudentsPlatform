@@ -16,6 +16,12 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { CoursesComponent } from './courses/courses.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCardModule } from '@angular/material/card';
+import { CardComponent } from './card/card.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +30,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     OpenViduVideoComponent,
     NavBarComponent,
     SideNavComponent,
+    LandingPageComponent,
+    CoursesComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +45,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatDividerModule,
     MatSidenavModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
