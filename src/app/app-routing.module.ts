@@ -30,6 +30,7 @@ const routes: Routes = [
       },
     ],
   },
+  { path: 'meeting', component: MeetingComponent },
   {
     path: 'list-courses',
     component: NavBarComponent,

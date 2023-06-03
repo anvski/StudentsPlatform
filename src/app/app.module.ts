@@ -29,6 +29,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NoteComponent } from './course-detail/notes/note/note.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     EventsComponent,
     NotesComponent,
     NoteComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

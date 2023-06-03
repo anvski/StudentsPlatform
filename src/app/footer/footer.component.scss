@@ -36,14 +36,13 @@ a {
   padding: 0px 15%;
 }
 .banner {
-  background: url(../../assets/images/course-bg1.jpg);
+  background: url(../../assets/images/bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: 100vh;
   background-attachment: fixed;
 }
-
 .logo {
   width: 30%;
   display: flex;
@@ -222,12 +221,6 @@ section.content.mission {
   animation: pop-in 0.5s;
 }
 
-.card-courses {
-  margin-top: 2%;
-}
-.contents {
-  margin-left: 2%;
-}
 .card-1 h3 {
   color: #e4e4e4;
 }
@@ -536,8 +529,4 @@ footer {
   100% {
     transform: translateY(0);
   }
-}
-
-.footer-comp {
-  margin-top: 25%;
 }
