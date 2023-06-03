@@ -91,6 +91,8 @@ $my-theme: mat.define-light-theme(
 
 @include mat.icon-theme($my-theme);
 
+@include mat.tabs-theme($my-theme);
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;

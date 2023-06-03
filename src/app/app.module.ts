@@ -21,6 +21,10 @@ import { CoursesComponent } from './courses/courses.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { CardComponent } from './card/card.component';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { EventsComponent } from './course-detail/events/events.component';
+import { NotesComponent } from './course-detail/notes/notes.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,9 @@ import { CardComponent } from './card/card.component';
     LandingPageComponent,
     CoursesComponent,
     CardComponent,
+    CourseDetailComponent,
+    EventsComponent,
+    NotesComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +54,7 @@ import { CardComponent } from './card/card.component';
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatCardModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
