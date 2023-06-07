@@ -1,0 +1,21 @@
+*{
+  font-size: x-large;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  padding: 100px;
+}
+
+.row {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.yellow-background {
+  background-color: #e8984b;
+}

@@ -30,6 +30,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NoteComponent } from './course-detail/notes/note/note.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FooterComponent } from './footer/footer.component';
+import {ProfileComponent} from "./profile/profile.component";
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { FooterComponent } from './footer/footer.component';
     NotesComponent,
     NoteComponent,
     FooterComponent,
+    ProfileComponent,
+    LeaderboardComponent
   ],
   imports: [
     BrowserModule,

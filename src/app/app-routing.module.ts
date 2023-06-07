@@ -7,6 +7,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { EventsComponent } from './course-detail/events/events.component';
 import { NotesComponent } from './course-detail/notes/notes.component';
+import {ProfileComponent} from "./profile/profile.component";
+import {LeaderboardComponent} from "./leaderboard/leaderboard.component";
 
 const routes: Routes = [
   {
@@ -36,6 +38,14 @@ const routes: Routes = [
     component: NavBarComponent,
     children: [{ path: '', component: CoursesComponent }],
   },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  },
+  {
+    path: 'leaderboard',
+    component: LeaderboardComponent
+  }
 ];
 
 @NgModule({
