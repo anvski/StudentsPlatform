@@ -39,7 +39,8 @@ import { LoginComponent } from './login/login.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
-import { AddFileComponent } from './add-file/add-file.component';
+import { RegisterComponent } from './register/register.component';
+import { DiscussionComponent } from './discussion/discussion.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { AddFileComponent } from './add-file/add-file.component';
     FooterComponent,
     AddEventComponent,
     LoginComponent,
-    AddFileComponent,
+    RegisterComponent,
+    DiscussionComponent,
   ],
   imports: [
     BrowserModule,
