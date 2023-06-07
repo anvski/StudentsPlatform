@@ -15,9 +15,5 @@ export class LeaderboardComponent {
     this.http
       .get<Student[]>('/students/scoreboard')
       .subscribe((val) => (this.students = val));
-
-    this.http
-      .get<Student[]>('/students/scoreboard')
-      .subscribe((val) => (this.students = val));
   }
 }
