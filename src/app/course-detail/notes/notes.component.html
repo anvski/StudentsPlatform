@@ -1,3 +1,13 @@
 <div class="cards">
   <div *ngFor="let note of notes"><app-note [content]="note"></app-note></div>
 </div>
+<ng-container color="warn" class="loading">
+  <button
+    mat-raised-button
+    color="primary"
+    routerLink="/add-file"
+    class="button"
+  >
+    Add a New File
+  </button>
+</ng-container>

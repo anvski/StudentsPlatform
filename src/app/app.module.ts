@@ -30,8 +30,17 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NoteComponent } from './course-detail/notes/note/note.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FooterComponent } from './footer/footer.component';
-import {ProfileComponent} from "./profile/profile.component";
-import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddEventComponent } from './add-event/add-event.component';
+import { LoginComponent } from './login/login.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
+import { RegisterComponent } from './register/register.component';
+import { DiscussionComponent } from './discussion/discussion.component';
 
 @NgModule({
   declarations: [
@@ -49,8 +58,10 @@ import { LeaderboardComponent } from './leaderboard/leaderboard.component';
     NotesComponent,
     NoteComponent,
     FooterComponent,
-    ProfileComponent,
-    LeaderboardComponent
+    AddEventComponent,
+    LoginComponent,
+    RegisterComponent,
+    DiscussionComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +80,13 @@ import { LeaderboardComponent } from './leaderboard/leaderboard.component';
     MatTableModule,
     MatProgressSpinnerModule,
     MatGridListModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

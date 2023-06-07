@@ -1,0 +1,89 @@
+<div
+  style="
+    background: url('../../assets/images/login-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  "
+>
+  <div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="25" class="mat-elevation-z4 container">
+      <mat-toolbar color="primary" class="round">Најава</mat-toolbar>
+      <form
+        [formGroup]="form"
+        class="example-form"
+        fxLayoutAlign="stretch"
+        fxLayout="column"
+        (ngSubmit)="submit()"
+      >
+        <mat-form-field class="example-full-width">
+          <mat-label>Корисничко име</mat-label>
+          <input
+            type="username"
+            matInput
+            formControlName="username"
+            [errorStateMatcher]="matcher"
+            placeholder="Ваше корисничко име..."
+          />
+          <mat-error *ngIf="form.controls['username'].hasError('required')">
+            Корисничкото име е <strong>задолжително</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Лозинка</mat-label>
+          <input
+            type="password"
+            matInput
+            formControlName="password"
+            [errorStateMatcher]="matcher"
+            placeholder="Ваша лозинка..."
+          />
+          <mat-error *ngIf="form.controls['password'].hasError('required')">
+            Лозинката е <strong>задолжителна</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Лозинка</mat-label>
+          <input
+            type="password"
+            matInput
+            formControlName="password"
+            [errorStateMatcher]="matcher"
+            placeholder="Ваша лозинка..."
+          />
+          <mat-error *ngIf="form.controls['password'].hasError('required')">
+            Лозинката е <strong>задолжителна</strong>
+          </mat-error>
+        </mat-form-field>
+        <button
+          color="accent"
+          mat-raised-button
+          type="submit"
+          [disabled]="!form.valid"
+        >
+          Најава
+        </button>
+      </form>
+      <mat-card-actions>
+        <div fxFlexFill fxLayout="column">
+          <mat-toolbar-row fxLayoutAlign="center center"
+            ><span style="color: whitesmoke"
+              >Немате корисничка сметка?</span
+            ></mat-toolbar-row
+          >
+          <button
+            mat-flat-button
+            type="submit"
+            color="primary"
+            routerLink="/register"
+          >
+            Регистрација
+          </button>
+          <mat-toolbar-row fxLayoutAlign="center center"
+            ><a routerLink="">Назад на насловна</a></mat-toolbar-row
+          >
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

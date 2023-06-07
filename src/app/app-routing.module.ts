@@ -7,8 +7,10 @@ import { CoursesComponent } from './courses/courses.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { EventsComponent } from './course-detail/events/events.component';
 import { NotesComponent } from './course-detail/notes/notes.component';
-import {ProfileComponent} from "./profile/profile.component";
-import {LeaderboardComponent} from "./leaderboard/leaderboard.component";
+import { AddEventComponent } from './add-event/add-event.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { DiscussionComponent } from './discussion/discussion.component';
 
 const routes: Routes = [
   {
@@ -39,13 +41,21 @@ const routes: Routes = [
     children: [{ path: '', component: CoursesComponent }],
   },
   {
-    path: 'profile',
-    component: ProfileComponent,
+    path: 'add-event',
+    component: AddEventComponent,
   },
   {
-    path: 'leaderboard',
-    component: LeaderboardComponent
-  }
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+  },
+  {
+    path: 'discussion',
+    component: DiscussionComponent,
+  },
 ];
 
 @NgModule({

@@ -40,6 +40,7 @@ export class EventsComponent implements OnInit {
       .subscribe((val) => {
         this.events = val;
         this.dataSource = val;
+        console.log(this.events);
       });
   }
 }
