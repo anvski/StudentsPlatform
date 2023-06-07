@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Student} from "../models/student";
 import {HttpClient} from "@angular/common/http";
+import {Course} from "../models/course";
+import {Event} from "../models/event";
 
 interface Link {
   text: string;
@@ -16,6 +18,9 @@ interface Link {
 export class ProfileComponent implements OnInit{
   student: Student | undefined;
   percentage : number | undefined;
+  courses : Course[] | undefined;
+  pastEvents : Event[] | undefined;
+  upcomingEvents : Event[] | undefined;
 
   constructor(private http: HttpClient) {}
 
@@ -38,6 +43,9 @@ export class ProfileComponent implements OnInit{
       });
 
     this.getPercentage();
+    this.getCourses();
+    this.getPastEvents();
+    this.getUpcomingEvents();
   }
   getPercentage(){
     //set percentage
@@ -66,5 +74,23 @@ export class ProfileComponent implements OnInit{
       .catch(error => {
         console.error('Error occurred while retrieving student:', error);
       });
+  }
+  getCourses(){
+    //get courses
+    this.http
+      .get<Course[]>('/students/myCourses')
+      .subscribe((val) => (this.courses = val));
+  }
+  getPastEvents(){
+    //get past events
+    this.http
+      .get<Event[]>('/students/myPastEvents')
+      .subscribe((val) => (this.pastEvents = val));
+  }
+  getUpcomingEvents(){
+    //get upcoming events
+    this.http
+      .get<Event[]>('/students/myUpcomingEvents')
+      .subscribe((val) => (this.upcomingEvents = val));
   }
 }
