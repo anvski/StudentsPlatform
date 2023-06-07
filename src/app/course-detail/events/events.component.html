@@ -6,6 +6,17 @@
   <p>There are no events created for this course!</p>
 </div>
 
+<ng-container *ngIf="dataSource == undefined" color="warn" class="loading">
+  <button
+    mat-raised-button
+    color="primary"
+    routerLink="/add-event"
+    class="button"
+  >
+    Add a New Event
+  </button>
+</ng-container>
+
 <table
   mat-table
   [dataSource]="dataSource ? dataSource : []"

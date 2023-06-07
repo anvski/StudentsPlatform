@@ -17,6 +17,6 @@ export class CourseServiceService {
   }
 
   getEventsForCourseById(id: string) {
-    return this.http.get<Event[]>(`${this.baseUrl}${this.eventsUrl}/${id}`);
+    return this.http.get<Event[]>(`${this.eventsUrl}/${id}`);
   }
 }

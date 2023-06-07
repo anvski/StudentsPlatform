@@ -1,0 +1,58 @@
+<div fxLayoutAlign="center center" fxFlexFill fxLayoutGap="5% center">
+  <mat-card fxFlex="25" class="mat-elevation-z4">
+    <mat-toolbar color="primary">Add a New Event</mat-toolbar>
+    <form
+      [formGroup]="form"
+      class="example-form"
+      fxLayoutAlign="stretch"
+      fxLayout="column"
+      (ngSubmit)="submit()"
+    >
+      <mat-form-field class="example-full-width">
+        <mat-label>Event Name</mat-label>
+        <input
+          type="eventname"
+          matInput
+          formControlName="eventname"
+          [errorStateMatcher]="matcher"
+          placeholder="Event name..."
+        />
+        <mat-error *ngIf="form.controls['eventname'].hasError('required')">
+          Event name is a <strong>required</strong> field
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field color="primary">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+          color="primary"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker color="primary"></mat-datepicker>
+      </mat-form-field>
+      <label>Choose the event type </label>
+      <mat-radio-group>
+        <mat-radio-button value="auto">Online</mat-radio-button>
+        <mat-radio-button value="always">offline</mat-radio-button>
+      </mat-radio-group>
+      <button
+        color="accent"
+        mat-raised-button
+        type="submit"
+        [disabled]="!form.valid"
+      >
+        Create new Event
+      </button>
+      <button
+        mat-flat-button
+        type="submit"
+        color="primary"
+        routerLink="/list-courses"
+      >
+        Go Back
+      </button>
+    </form>
+  </mat-card>
+</div>

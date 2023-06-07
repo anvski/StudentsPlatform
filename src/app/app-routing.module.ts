@@ -7,6 +7,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { EventsComponent } from './course-detail/events/events.component';
 import { NotesComponent } from './course-detail/notes/notes.component';
+import { AddEventComponent } from './add-event/add-event.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -35,6 +37,14 @@ const routes: Routes = [
     path: 'list-courses',
     component: NavBarComponent,
     children: [{ path: '', component: CoursesComponent }],
+  },
+  {
+    path: 'add-event',
+    component: AddEventComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
 ];
 

@@ -30,6 +30,16 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NoteComponent } from './course-detail/notes/note/note.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FooterComponent } from './footer/footer.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddEventComponent } from './add-event/add-event.component';
+import { LoginComponent } from './login/login.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
+import { AddFileComponent } from './add-file/add-file.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +57,9 @@ import { FooterComponent } from './footer/footer.component';
     NotesComponent,
     NoteComponent,
     FooterComponent,
+    AddEventComponent,
+    LoginComponent,
+    AddFileComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +78,13 @@ import { FooterComponent } from './footer/footer.component';
     MatTableModule,
     MatProgressSpinnerModule,
     MatGridListModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
