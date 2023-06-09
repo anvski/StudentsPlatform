@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { Message } from '../models/message';
 
 @Component({
   selector: 'app-discussion',
   templateUrl: './discussion.component.html',
   styleUrls: ['./discussion.component.scss'],
 })
-export class DiscussionComponent {
-  longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
-  from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-  originally bred for hunting.`;
+export class DiscussionComponent implements OnInit {
+  messages: Message[] = [];
+  constructor(private http: HttpClient) {}
+  ngOnInit(): void {
+    this.http
+      .get<Message[]>('/events/messages')
+      .subscribe((val) => (this.messages = val));
+    console.log(this.messages);
+  }
 }

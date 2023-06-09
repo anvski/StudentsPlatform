@@ -6,59 +6,61 @@
   <p>There are no events created for this course!</p>
 </div>
 
-<ng-container *ngIf="dataSource == undefined" color="warn" class="loading">
-  <button
-    mat-raised-button
+<div class="flex-table">
+  <table
+    mat-table
+    [dataSource]="dataSource ? dataSource : []"
+    class="mat-elevation-z8 demo-table"
     color="primary"
-    routerLink="/add-event"
-    class="button"
+    *ngIf="events.length > 0"
   >
-    Add a New Event
-  </button>
-</ng-container>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.eventId }}</td>
+    </ng-container>
 
-<table
-  mat-table
-  [dataSource]="dataSource ? dataSource : []"
-  class="mat-elevation-z8 demo-table"
-  color="primary"
-  *ngIf="events.length > 0"
->
-  <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef>Id</th>
-    <td mat-cell *matCellDef="let element">{{ element.eventId }}</td>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateCreated">
+      <th mat-header-cell *matHeaderCellDef>Date Created</th>
+      <td mat-cell *matCellDef="let element">{{ element.dateCreated }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="dateScheduled">
+      <th mat-header-cell *matHeaderCellDef>Scheduled For</th>
+      <td mat-cell *matCellDef="let element">{{ element.dateScheduled }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="createdBy">
+      <th mat-header-cell *matHeaderCellDef>Organizer</th>
+      <td mat-cell *matCellDef="let element">{{ element.createdBy.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="location">
+      <th mat-header-cell *matHeaderCellDef>Location</th>
+      <td mat-cell *matCellDef="let element">{{ element.location }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="attendees">
+      <th mat-header-cell *matHeaderCellDef>Attendees</th>
+      <td mat-cell *matCellDef="let element">{{ element.numOfStudents }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <ng-container color="warn" class="loading">
+    <button
+      mat-raised-button
+      color="primary"
+      routerLink="/add-event"
+      class="button"
+    >
+      Add a New Event
+    </button>
   </ng-container>
-
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef>Name</th>
-    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="dateCreated">
-    <th mat-header-cell *matHeaderCellDef>Date Created</th>
-    <td mat-cell *matCellDef="let element">{{ element.dateCreated }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="dateScheduled">
-    <th mat-header-cell *matHeaderCellDef>Scheduled For</th>
-    <td mat-cell *matCellDef="let element">{{ element.dateScheduled }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="createdBy">
-    <th mat-header-cell *matHeaderCellDef>Organizer</th>
-    <td mat-cell *matCellDef="let element">{{ element.createdBy.name }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="location">
-    <th mat-header-cell *matHeaderCellDef>Location</th>
-    <td mat-cell *matCellDef="let element">{{ element.location }}</td>
-  </ng-container>
-
-  <ng-container matColumnDef="attendees">
-    <th mat-header-cell *matHeaderCellDef>Attendees</th>
-    <td mat-cell *matCellDef="let element">{{ element.numOfStudents }}</td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-</table>
+</div>
