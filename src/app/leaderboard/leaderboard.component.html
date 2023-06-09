@@ -1,0 +1,8 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <h2>Leaderboard</h2>
+  <div *ngFor="let student of students; let isFirst = first" class="row" [ngClass]="{ 'yellow-background': isFirst }">
+    {{ student.name }} {{ student.surname }} {{ student.points }}
+  </div>
+</div>
+<app-footer></app-footer>

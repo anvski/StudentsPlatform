@@ -41,6 +41,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { RegisterComponent } from './register/register.component';
 import { DiscussionComponent } from './discussion/discussion.component';
+import {ProfileComponent} from "./profile/profile.component";
+import {LeaderboardComponent} from "./leaderboard/leaderboard.component";
 
 @NgModule({
   declarations: [
@@ -62,6 +64,8 @@ import { DiscussionComponent } from './discussion/discussion.component';
     LoginComponent,
     RegisterComponent,
     DiscussionComponent,
+    ProfileComponent,
+    LeaderboardComponent
   ],
   imports: [
     BrowserModule,

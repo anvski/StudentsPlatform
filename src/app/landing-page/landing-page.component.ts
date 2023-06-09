@@ -19,12 +19,13 @@ export class LandingPageComponent implements OnInit {
       .get<Courses[]>('/courses')
       .subscribe((val) => (this.courses = val));
     this.http
-      .get<Students[]>('/students/')
+      .get<Students[]>('/students')
       .subscribe(
-        (val) => ((this.students = val), console.log('TEST ' + this.students))
+        (val) => ((this.students = val))
       );
+    console.log('TEST ' + this.students)
     this.http
-      .get<Events[]>('/courses/events')
+      .get<Events[]>('/events')
       .subscribe((val) => (this.events = val));
   }
 }

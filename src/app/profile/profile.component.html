@@ -1,0 +1,63 @@
+<app-nav-bar></app-nav-bar>
+<div class="container mt-5">
+  <div class="main-body">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body mt-3">
+            <div class="d-flex flex-column align-items-center text-center">
+              <img src="../../assets/images/profile.png" width="110">
+              <div class="mt-3">
+                <h4>{{student?.name}} {{student?.surname}}</h4>
+                <p>{{student?.email}}</p>
+                <p class="text-muted font-size-sm">Points: {{student?.points}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="d-flex align-items-center mb-3">Weekly progress</h5>
+                    <p>This sections shows how many events were attended by you out of the total recommended amount.</p>
+                    <p>{{percentage}}%</p>
+                    <div id="progress-bar">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                <h6 class="mb-0">Courses you enrolled</h6>
+                <span class="text-secondary">{{courses?.length}}</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                <h6 class="mb-0">Events you attended</h6>
+                <span class="text-secondary">{{pastEvents?.length}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row m-3">
+        <div class="col mb-3">
+          <div class="col-sm-3">
+            <h6 class="mb-5">Past events</h6>
+          </div>
+          <div class="col-sm-9 text-secondary" *ngFor="let event of pastEvents;" >
+            <p class="p-3 text-white" style="background-color: #528A8A">{{event?.name}}</p>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <div class="col-sm-3">
+            <h6 class="mb-5">Upcoming events</h6>
+          </div>
+          <div class="col-sm-9 text-secondary" *ngFor="let event of upcomingEvents;" >
+            <p class="p-3 text-white" style="background-color: #e8984b">{{event?.name}}</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+<router-outlet></router-outlet>

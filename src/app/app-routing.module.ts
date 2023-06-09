@@ -11,6 +11,8 @@ import { AddEventComponent } from './add-event/add-event.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DiscussionComponent } from './discussion/discussion.component';
+import {ProfileComponent} from "./profile/profile.component";
+import {LeaderboardComponent} from "./leaderboard/leaderboard.component";
 
 const routes: Routes = [
   {
@@ -56,6 +58,14 @@ const routes: Routes = [
     path: 'discussion',
     component: DiscussionComponent,
   },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+  },
+  {
+    path: 'leaderboard',
+    component: LeaderboardComponent
+  }
 ];
 
 @NgModule({
